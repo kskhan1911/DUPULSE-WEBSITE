@@ -1,0 +1,264 @@
+{% extends 'templates_base/base.html' %}
+
+{% load static %}
+
+{% block common_css %} 
+<link rel="stylesheet" href="{% static 'static_base/static_base_css/common.css' %}">
+{% endblock common_css %}
+
+{% block apps_css %} {% endblock apps_css %}
+
+
+
+{% block common_body %}
+
+	<div class="row ms-2 me-2 text-center " id="commonbody_row">
+
+		<!--input andfedback -->
+		<div class="col-lg-8 col-md-12 col-sm-12 " id="commonbody_row_column1">
+
+			<!--information input -->
+			<div class="row P-2 mt-4 mb-4 ms-2 me-1 d-flex justify-content-center"  id="commonbody_row_column1_row1">
+				
+				<!--page header -->
+				<h4 class="col-lg-4 col-md-4 col-sm-4 p-2 m-4 fw-bold d-flex align-items-center justify-content-center" 
+				id="page_title"> {% block page_heading %} {% endblock page_heading %}</h4>
+
+				<!--text field -->
+				<div class="input-group">
+					<textarea class="form-control p-2 ms-4 me-4 mb-2" placeholder="Please enter your information" aria-label="With textarea"></textarea>
+				</div>
+
+				<!--file upload and submit-->
+				<div class="row mb-2 d-flex align-items-center justify-content-center" id="commonbody_row_column1_row1_input">
+
+					<!--file upload-->
+					<div class="col-lg-6 col-md-6 col-sm-6" >
+						<input class="form-control row p-2 m-2" type="file" id="formFileMultiple" multiple>
+					</div>
+					
+					<!--submit button-->
+					<div class="col-lg-6 col-md-6 col-sm-6 ">
+						<div class="row text-center p-2 m-2" id="commonbody_row_column1_row1_submit">
+							<button class="btn btn-block btn-primary" id="button_commonbody_submit" style="background-color: #ffffff;" 
+							type="submit">Submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--feedback -->
+			<div class="row P-2  mb-4 ms-2 me-1 d-flex align-items-center justify-content-center"  id="commonbody_row_column1_row2">
+
+				<h4 class="col-lg-4 col-md-4 col-sm-4 p-2 mt-4 mb-2 fw-bold d-flex align-items-center justify-content-center" 
+				id=""> Feedback</h4>
+
+				<div class="row p-2 d-flex justify-content-around">
+					<div class="col-lg-2 col-md-2 col-sm-2 col-12 P-2 m-2 mb-4" id="button_commonbody_feedback">
+						<a id="button_commonbody_feedback_icon" href="{% url 'patients'%}">
+							<i class="bi bi-person-fill "></i><br></a>
+						<h6 id="button_commonbody_feedback_title">Patient</h6>
+					</div>
+	
+					<div class="col-lg-2 col-md-2 col-sm-2 col-12 P-2 m-2 mb-4" id="button_commonbody_feedback">
+						<a id="button_commonbody_feedback_icon" href="{% url 'doctors'%}">
+							<i class="bi bi-person-add"></i></a>
+						<h6 id="button_commonbody_feedback_title">Doctor</h6>
+					</div>
+	
+					<div class="col-lg-2 col-md-2 col-sm-2 col-12 P-2 m-2 mb-4" id="button_commonbody_feedback">
+						<a id="button_commonbody_feedback_icon" href="{% url 'hospitals'%}">
+							<i class="bi bi-hospital-fill"></i></a>
+						<h6 id="button_commonbody_feedback_title">Hospital</h6>
+					</div>
+	
+					<div class="col-lg-2 col-md-2 col-sm-2 col-12 P-2 m-2 mb-4" id="button_commonbody_feedback">
+						<a id="button_commonbody_feedback_icon" href="{% url 'diagnosiss'%}">
+							<i class="bi bi-hospital"></i></a>
+						<h6 id="button_commonbody_feedback_title">Diagnosis</h6>
+					</div>
+	
+					<div class="col-lg-2 col-md-2 col-sm-2 col-12 P-2 m-2 mb-4" id="button_commonbody_feedback">
+						<a id="button_commonbody_feedback_icon" href="{% url 'pharmacys'%}">
+							<i class="bi bi-capsule-pill"></i></a>
+						<h6 id="button_commonbody_feedback_title">Pharmacy</h6>
+					</div>
+	
+					<div class="col-lg-2 col-md-2 col-sm-2 col-12 P-2 m-2 mb-4" id="button_commonbody_feedback">
+						<a id="button_commonbody_feedback_icon" href="{% url 'ambulances'%}">
+							<i class="bi bi-car-front"></i></a>
+						<h6 id="button_commonbody_feedback_title">Ambulance</h6>
+					</div>
+	
+					<div class="col-lg-2 col-md-2 col-sm-2 col-12 P-2 m-2 mb-4" id="button_commonbody_feedback">
+						<a id="button_commonbody_feedback_icon" href="{% url 'bloods'%}">
+							<i class="bi bi-prescription2"></i></i></a>
+						<h6 id="button_commonbody_feedback_title">Blood</h6>
+					</div>
+	
+					<div class="col-lg-2 col-md-2 col-sm-2 col-12 P-2 m-2 mb-4" id="button_commonbody_feedback">
+						<a id="button_commonbody_feedback_icon" href="{% url 'organs'%}">
+							<i class="bi bi-lungs-fill"></i></a>
+						<h6 id="button_commonbody_feedback_title">Organ<Ambulance/h6>
+					</div>
+	
+					<div class="col-lg-2 col-md-2 col-sm-2 col-12 P-2 m-2 mb-4" id="button_commonbody_feedback">
+						<a id="button_commonbody_feedback_icon" href="{% url 'services'%}">
+							<i class="bi bi-pc-display"></i></a>
+						<h6 id="button_commonbody_feedback_title">Service</h6>
+					</div>
+	
+					<div class="col-lg-2 col-md-2 col-sm-2 col-12 P-2 m-2 mb-4" id="button_commonbody_feedback">
+						<a id="button_commonbody_feedback_icon" href="{% url 'payments'%}">
+							<i class="bi bi-credit-card"></i></a>
+						<h6 id="button_commonbody_feedback_title">Payment</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!--selection -->
+		<div class="col-lg-4 col-md-12 col-sm-12 text-center" id="commonbody_row_column2">
+
+			<form class="p-2 mt-4 mb-4 ms-1 me-2 text-center"  id="commonbody_row_column2_form">
+
+				<!-- selection heading-->
+				<h4 class="mb-4 pt-2 fw-bold" style="color: #00a6b4;" id="selection_heading">
+					Please select your option
+				</h4>
+
+				<!--patient selection -->
+				<div class="row text-center m-1" id="commonbody_row_column2_form_row1">
+					<div class="col-lg-6 col-md-6 col-sm-6 form-outline mb-2" id="commonbody_form_patient_selection">
+						<input type="password" id="" class="form-control" 
+						placeholder="Patient" />
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 form-outline mb-2" id="commonbody_form_patient_suggestion">
+						<input type="password" id="" class="form-control" 
+						placeholder="Suggestion" />
+					</div>
+				</div>
+				
+				<!--doctor selection-->
+				<div class="row text-center m-1" id="commonbody_row_column2_form_row2">
+					<div class="col-lg-6 col-md-6 col-sm-6 form-outline mb-2" id="commonbody_form_doctor_selection">
+						<input type="password" id="" class="form-control" 
+						placeholder="Doctor" />
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 form-outline mb-2" id="commonbody_form_doctor_suggestion">
+						<input type="password" id="" class="form-control" 
+						placeholder="Suggestion" />
+					</div>
+				</div>
+				
+				<!--hospital selection-->
+				<div class="row text-center m-1" id="commonbody_row_column2_form_row3">
+					<div class="col-lg-6 col-md-6 col-sm-6 form-outline mb-2" id="commonbody_form_hospital_selection">
+						<input type="password" id="" class="form-control" 
+						placeholder="Hospital" />
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 form-outline mb-2" id="commonbody_form_hospital_suggestion">
+						<input type="password" id="" class="form-control" 
+						placeholder="Suggestion" />
+					</div>
+				</div>
+				
+				<!--diagonosis selection-->
+				<div class="row text-center m-1" id="commonbody_row_column2_form_row4">
+					<div class="col-lg-6 col-md-6 col-sm-6 form-outline mb-2" id="commonbody_form_diagnosis_selection">
+						<input type="password" id="" class="form-control" 
+						placeholder="Diagnosis" />
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 form-outline mb-2" id="commonbody_form_diagnosis_suggestion">
+						<input type="password" id="" class="form-control" 
+						placeholder="Suggestion" />
+					</div>
+				</div>
+				
+				<!--pharmacy selection-->
+				<div class="row text-center m-1" id="commonbody_row_column2_form_row5">
+					<div class="col-lg-6 col-md-6 col-sm-6 form-outline mb-2" id="commonbody_form_pharmacy_selection">
+						<input type="password" id="" class="form-control" 
+						placeholder="Pharmacy" />
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 form-outline mb-2" id="commonbody_form_pharmacy_suggestion">
+						<input type="password" id="" class="form-control" 
+						placeholder="Suggestion" />
+					</div>
+				</div>
+				
+				<!--ambulance selection-->
+				<div class="row text-center m-1" id="commonbody_row_column2_form_row6">
+					<div class="col-lg-6 col-md-6 col-sm-6 form-outline mb-2" id="commonbody_form_ambulance_selection">
+						<input type="password" id="" class="form-control" 
+						placeholder="Ambulance" />
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 form-outline mb-2" id="commonbody_form_ambulance_suggestion">
+						<input type="password" id="" class="form-control" 
+						placeholder="Suggestion" />
+					</div>
+				</div>
+
+				<!--Blood selection-->
+				<div class="row text-center m-1" id="commonbody_row_column2_form_row7">
+					<div class="col-lg-6 col-md-6 col-sm-6 form-outline mb-2" id="commonbody_form_blood_selection">
+						<input type="password" id="" class="form-control" 
+						placeholder="Blood" />
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 form-outline mb-2" id="commonbody_form_blood_suggestion">
+						<input type="password" id="" class="form-control" 
+						placeholder="Suggestion" />
+					</div>
+				</div>
+				
+				<!--organ selection-->
+				<div class="row text-center m-1" id="commonbody_row_column2_form_row8">
+					<div class="col-lg-6 col-md-6 col-sm-6 form-outline mb-2" id="commonbody_form_organ_selection">
+						<input type="password" id="" class="form-control" 
+						placeholder="Organ" />
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 form-outline mb-2" id="commonbody_form_organ_suggestion">
+						<input type="password" id="" class="form-control" 
+						placeholder="Suggestion" />
+					</div>
+				</div>
+
+				<!--service selection-->
+				<div class="row text-center m-1" id="commonbody_row_column2_form_row9">
+					<div class="col-lg-6 col-md-6 col-sm-6 form-outline mb-2" id="commonbody_form_payment_selection">
+						<input type="password" id="" class="form-control" 
+						placeholder="Service" />
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 form-outline mb-2" id="commonbody_form_payment_suggestion">
+						<input type="password" id="" class="form-control" 
+						placeholder="Suggestion" />
+					</div>
+				</div>
+				
+				<!--payment selection-->
+				<div class="row text-center m-1" id="commonbody_row_column2_form_row10">
+					<div class="col-lg-6 col-md-6 col-sm-6 form-outline mb-2" id="commonbody_form_payment_selection">
+						<input type="password" id="" class="form-control" 
+						placeholder="Payment option" />
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 form-outline mb-2" id="commonbody_form_payment_suggestion">
+						<input type="password" id="" class="form-control" 
+						placeholder="Suggestion" />
+					</div>
+				</div>
+
+				<!-- submit button-->
+				<div class="row text-center m-3" id="commonbody_row_column2_form_row11">
+					<button class="btn btn-block btn-primary" id="button_commonbody_submit" style="background-color: #ffffff;" 
+					type="submit">Submit</button>
+				</div>
+
+			</form>
+
+		</div>
+
+	</div> 
+
+{% endblock common_body %}
+

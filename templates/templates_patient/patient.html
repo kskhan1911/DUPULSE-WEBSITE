@@ -1,0 +1,11 @@
+{% extends 'templates_base/common.html' %}
+
+{% load static %}
+
+{% block title %} Patient {% endblock title %}
+
+{% block patient_css %} 
+<link rel="stylesheet" href="{% static 'static_patient/static_patient_css/patient.css' %}">
+{% endblock patient_css %}
+
+{% block page_heading %} Patient {% endblock page_heading %}

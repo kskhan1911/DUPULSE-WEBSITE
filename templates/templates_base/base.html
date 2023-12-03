@@ -1,0 +1,177 @@
+<!doctype html>
+
+{% load static %}
+
+<html lang="en">
+
+
+	<head>
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>{% block title %}{% endblock title %}</title>
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+		
+
+		<link rel="stylesheet" href="{% static 'static_base/static_base_css/base.css' %}">
+
+		{% block common_css %} {% endblock common_css %}
+
+		{% block home_css %} {% endblock home_css %}
+
+		{% block patient_css %} {% endblock patient_css %}
+
+		{% block apps_css %} {% endblock apps_css %}
+
+
+
+	</head >
+
+
+	<body >
+
+		<!-- Header -->
+		<header class="sticky-top w-auto overflow-hidden" id="header">
+
+			<div class="row" id="header_row">
+					
+				<!--logo -->
+				<div class="col-lg-3 col-md-6 col-sm-12 p-1 text-center align-middle" id="header_row_column1">
+					<a href="{% url 'homes'%}">
+						<img class="" id="logo" src="{% static 'static_base/static_base_images/logoandname04.png' %}" class="img-fluid" alt="DUPULSE"></a>
+				</div>
+	
+				<!--sitename and navbar -->
+				<div class="col-lg-6 col-md-6 col-sm-12 p-1 text-center align-middle" id="header_row_column2">
+	
+					<!--sitename -->
+					<h1 id="site_name">DUPULSE HEALTHCARE</h1>
+
+					<!--navbar -->
+					<div class="  text-center align-middle" id="navbar" ngbDropdown container="body" >
+						<a id="main_menu" href="{% url 'homes'%}"><i class="bi bi-house-door-fill"></i></a>
+						<a class="dropdown dropdown-toggle" id="main_menu" href="#" 
+						role="button" data-bs-toggle="dropdown" aria-expanded="false" 
+						data-bs-popper-config='{"strategy":"fixed"}'>Servises</a>
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" >
+							<li><a class="dropdown-item" href="{% url 'patients'%}">Patient</a></li>
+							<li><a class="dropdown-item" href="{% url 'doctors'%}">Doctor</a></li>
+							<li><a class="dropdown-item" href="{% url 'hospitals'%}">Hospital</a></li>
+							<li><a class="dropdown-item" href="{% url 'diagnosiss'%}">Diagnosis</a></li>
+							<li><a class="dropdown-item" href="{% url 'pharmacys'%}">Pharmacy</a></li>
+							<li><a class="dropdown-item" href="{% url 'ambulances'%}">Ambulance</a></li>
+							<li><a class="dropdown-item" href="{% url 'bloods'%}">Blood</a></li>
+							<li><a class="dropdown-item" href="{% url 'organs'%}">Organ</a></li>
+							<li><a class="dropdown-item" href="{% url 'services'%}">Service</a></li>
+							<li><a class="dropdown-item" href="{% url 'payments'%}">Payment</a></li>
+						  </ul>
+						<a id="main_menu" href="{% url 'contacts'%}">Contact</a>
+						<a id="main_menu" href="{% url 'abouts'%}">About</a>
+						<a id="main_menu" href="{% url 'appss'%}">Apps </a>
+						<a id="search_icon" href=""><i class="bi bi-search"></i> </a>
+					</div>
+	
+				</div>
+	
+				<!--header items -->
+				<div class="col-lg-3 col-md-6 col-sm-12 p-1  d-flex align-items-center justify-content-evenly" id="header_row_column3"> 
+					<a id="button_header_item"><i class="bi bi-grid-3x3-gap-fill"></i></a>
+					<a id="button_header_item"><i class="bi bi-bell-fill"></i></a>
+					<a id="button_header_item"><i class="bi bi-chat-dots-fill"></i></a>
+					<a id="button_header_item"><i class="bi bi-person-circle"></i></a>
+				</div>
+			</div>
+		</header>
+
+
+		<!-- Main Content -->
+		<main class="overflow-hidden">
+
+			<!--common body -->
+			{% block common_body %}{% endblock common_body %}
+
+			<!--home page -->  
+			{% block home_page %}{% endblock home_page %}
+
+			<!--patient page -->
+			{% block patient_page %}{% endblock patient_page %}
+
+			<!--patient page -->
+			{% block apps_page %}{% endblock apps_page %}
+				
+		</main>
+
+		
+		<!--footer -->
+		<footer class="overflow-hidden text-center text-white" id="footer">
+
+			<!-- social media, application, contact media -->
+			<div class="row text-center align-middle" id="footer_row1">
+
+				<!-- social media -->
+				<div class="col-lg-3 col-md-6 col-sm-12 p-2 text-center align-middle" id="footer_row1_column1">
+					<a id="button_footer_item_icon"><i class="bi bi-facebook"></i></a>
+					<a id="button_footer_item_icon"><i class="bi bi-twitter"></i></a>
+					<a id="button_footer_item_icon"><i class="bi bi-instagram"></i></a>
+					<a id="button_footer_item_icon"><i class="bi bi-linkedin"></i></a>
+					<a id="button_footer_item_icon"><i class="bi bi-pinterest"></i></a>
+					<a id="button_footer_item_icon"><i class="bi bi-youtube"></i></a>
+				</div>
+	
+				<!-- operating systemwise application -->
+				<div class="col-lg-6 col-md-6 col-sm-12 p-2 " id="footer_row1_column2">
+					<a id="button_footer_item_image"><img id="image_app" src="{% static 'static_icons/microsoftstore.png' %}" class="img" alt="Microsoft Store" ></a>
+					<a id="button_footer_item_image"><img id="image_app" src="{% static 'static_icons/mac.png' %}" class="img" alt="Mac" ></a>
+					<a id="button_footer_item_image"><img id="image_app" src="{% static 'static_icons/linux.png' %}" class="img" alt="Linux" ></a>
+					<a id="button_footer_item_image"><img id="image_app" src="{% static 'static_icons/googleplaystore.png' %}" class="img" alt="Google Play" ></a>
+					<a id="button_footer_item_image"><img id="image_app" src="{% static 'static_icons/applestore.png' %}" class="img" alt="Mac App Store" ></a>
+					<a id="button_footer_item_image"><img id="image_app" src="{% static 'static_icons/amazon.png' %}" class="img" alt="Amazon Appstore" ></a>
+				</div>
+	
+				<!-- contact media -->
+				<div class="col-lg-3 col-md-6 col-sm-12 p-2 text-center align-middle" id="footer_row1_column3">
+					<a id="button_footer_item_icon"><i class="bi bi-whatsapp"></i></a>
+					<a id="button_footer_item_icon"><i class="bi bi-messenger"></i></a>
+					<a id="button_footer_item_icon"><i class="bi bi-telegram"></i></a>
+					<a id="button_footer_item_icon"><i class="bi bi-skype"></i></a>
+					<a id="button_footer_item_icon"><i class="bi bi-wechat"></i></a>
+					<a id="button_footer_item_image"><img id="image_viber" src="{% static 'static_icons/viber.png' %}" class="img" alt="Viber" ></a>
+				</div>
+			</div>
+
+			<!-- contact items, address, copyright -->
+			<div class="row text-center align-middle" id="footer_row2">
+
+				<!-- contact items -->
+				<div class="col-lg-3 col-md-6 col-sm-12 p-1 text-center align-middle" id="footer_row2_column1">
+						<a id="footer_clickable_contact_text" href="tel:+8801772848476"><i class="bi bi-telephone-fill" id="header_clickable_contact_icon"></i>&nbsp;+8801772848476</a> <br>
+						<a id="footer_clickable_contact_text" href="mailto:+8801772848476"><i class="bi bi-envelope-at-fill" id="header_clickable_contact_icon"></i>&nbsp;dupulse.com@gmail.com</a>
+				</div>
+	
+				<!-- address -->
+				<div class="col-lg-6 col-md-6 col-sm-12 p-1 d-flex align-items-center justify-content-center" id="footer_row2_column2">
+						<h6 id="company_address" >
+							Address: House-94, Road-4, Block-F, Section-11, <br>
+							Journalist Residential Area, Mirpur, Dhaka, Bangladesh
+							</h6>
+				</div>
+	
+				<!-- copyright -->
+				<div class="col-lg-3 col-md-6 col-sm-12 p-1 d-flex align-items-center justify-content-center" id="footer_row2_column3">
+						&copy; <script>document.write(new Date().getFullYear())</script>
+						<a class="text-white " id="footer_copyright" href="https://dupulse.com/">DUPULSE</a>
+				</div>
+			</div>
+
+		</footer>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+	</body>
+
+</html>
+

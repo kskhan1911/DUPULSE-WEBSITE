@@ -1,0 +1,46 @@
+#carouselExampleCaptions{
+    color: #0cb6c3;
+    border: #0cb6c3;
+    box-shadow: 0 0 10px;
+}
+
+#button_homepage_module{
+    color: #0cb6c3;
+    border: #0cb6c3;
+    border-radius: 10px;
+    box-shadow: 0 0 10px;
+}
+
+#button_homepage_module_icon{
+    width: 60px;
+    height: 60px;
+    font-size: 35px;
+    background-color: #ffffff;
+    color: #0cb6c3;
+    border: #0cb6c3;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 100%;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 0 10px;
+    margin: 10px;
+}
+
+#button_homepage_module_title{
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+#homepage_row_column2_form{
+    color: #0cb6c3;
+    border: #0cb6c3;
+    box-shadow: 0 0 10px;
+}
+
+#button_login_signup{
+    color: #0cb6c3;
+    border: #0cb6c3;
+    box-shadow: 0 0 10px;
+}

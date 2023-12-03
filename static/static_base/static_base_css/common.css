@@ -1,0 +1,66 @@
+#commonbody_row_column1_row1{
+    color: #0cb6c3;
+    border: #0cb6c3;
+    box-shadow: 0 0 10px;
+    
+}
+
+#page_title{
+    color: #0cb6c3;
+    border: #0cb6c3;
+    box-shadow: 0 0 10px;
+    height: 40px;
+}
+
+#formFileMultiple{
+    color: #0cb6c3;
+    border: #0cb6c3;
+    box-shadow: 0 0 10px;
+}
+
+#button_commonbody_submit{
+    color: #0cb6c3;
+    border: #0cb6c3;
+    box-shadow: 0 0 10px;
+}
+
+#commonbody_row_column1_row2{
+    color: #0cb6c3;
+    border: #0cb6c3;
+    box-shadow: 0 0 10px;
+}
+
+#button_commonbody_feedback{
+    color: #0cb6c3;
+    border: #0cb6c3;
+    border-radius: 10px;
+    box-shadow: 0 0 10px;
+}
+
+#button_commonbody_feedback_icon{
+    width: 60px;
+    height: 60px;
+    font-size: 35px;
+    background-color: #ffffff;
+    color: #0cb6c3;
+    border: #0cb6c3;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 100%;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 0 10px;
+    margin: 10px;
+}
+
+#button_commonbody_feedback_title{
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+#commonbody_row_column2_form{
+    color: #0cb6c3;
+    border: #0cb6c3;
+    box-shadow: 0 0 10px;
+}
